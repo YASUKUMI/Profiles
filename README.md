@@ -1,2 +1,2 @@
 # Profiles
-自用配置仓库
+自用clash远端配置文件
