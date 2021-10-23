@@ -93,10 +93,10 @@ dns:
     - https://doh.pub/dns-query
 
 proxies:
+# 支持的协议及加密算法示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/wiki/configuration
 
-# 服务器节点订阅
 proxy-providers:
 
 
-################ 
+########
 # Modified from: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/Outbound.yaml
