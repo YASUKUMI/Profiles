@@ -2,23 +2,29 @@
 # 只兼容OpenClash远端服务配置，使用前注意修改 default-nameserver 为自己本地的运营商DNS
 
 # Port of HTTP(S) proxy server on the local end
-port: 7890
+# port: 7890
 
 # Port of SOCKS5 proxy server on the local end
-socks-port: 7891
+# socks-port: 7891
 
 # Transparent proxy server port for Linux and macOS (Redirect TCP and TProxy UDP)
-redir-port: 7892
+# redir-port: 7892
 
 # Transparent proxy server port for Linux (TProxy TCP and TProxy UDP)
-tproxy-port: 7895
+# tproxy-port: 7893
 
 # HTTP(S) and SOCKS4(A)/SOCKS5 server on the same port
-mixed-port: 7893
+mixed-port: 7890
+
+# authentication of local SOCKS5/HTTP(S) server
+# authentication:
+#  - "user1:pass1"
+#  - "user2:pass2"
 
 # Set to true to allow connections to the local-end server from
 # other LAN IP addresses
-allow-lan: true
+allow-lan: false
+
 # This is only applicable when `allow-lan` is `true`
 # '*': bind all IP addresses
 # 192.168.122.11: bind a single IPv4 address
@@ -39,9 +45,13 @@ log-level: info
 ipv6: false
 
 # RESTful web API listening address
-external-controller: 0.0.0.0:9090
+external-controller: 127.0.0.1:9090
 
 hosts:
+  # '*.clash.dev': 127.0.0.1
+  # '.dev': 127.0.0.1
+  # 'alpha.clash.dev': '::1'
+
   # Firebase Cloud Messaging
   'mtalk.google.com': 108.177.125.188
   # Google Dl
@@ -52,13 +62,16 @@ profile:
   # Store the `select` results in $HOME/.config/clash/.cache
   # set false If you don't want this behavior
   # when two different configurations have groups with the same name, the selected values are shared
-  store-selected: true
+  store-selected: false
+
+# DNS server settings
+# This section is optional. When not present, the DNS server will be disabled.
 
 # DNS server settings
 # This section is optional. When not present, the DNS server will be disabled.
 dns:
-  enable: true
-  listen: 127.0.0.1:7874
+  enable: false
+  listen: 0.0.0.0:53
   # ipv6: false # when the false, response to AAAA questions will be empty
 
   # These nameservers are used to resolve the DNS nameserver hostnames below.
@@ -67,7 +80,7 @@ dns:
     - 221.176.88.95
     - 211.138.164.6
   enhanced-mode: redir-host # or fake-ip
-  fake-ip-range: 198.18.0.1/16
+  fake-ip-range: 198.18.0.1/16 # Fake IP addresses pool CIDR
   # use-hosts: true # lookup hosts and return IP record
   
   # Hostnames in this list will not be resolved with fake IPs
@@ -99,4 +112,3 @@ proxies:
 # 支持的协议及加密算法示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/wiki/configuration
 
 proxy-providers:
-
