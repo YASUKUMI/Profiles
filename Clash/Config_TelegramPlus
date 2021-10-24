@@ -1,0 +1,110 @@
+[custom]
+
+######## ruleset ########
+
+# Local Area Network
+ruleset=DIRECT,[]IP-CIDR,192.168.0.0/16
+ruleset=DIRECT,[]IP-CIDR,10.0.0.0/8
+ruleset=DIRECT,[]IP-CIDR,172.16.0.0/12
+ruleset=DIRECT,[]IP-CIDR,127.0.0.0/8
+ruleset=DIRECT,[]IP-CIDR,100.64.0.0/10
+ruleset=DIRECT,[]IP-CIDR,224.0.0.0/4
+ruleset=DIRECT,[]IP-CIDR,fe80::/10
+
+# Unbreak
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+
+# Arcaea
+ruleset=DIRECT,[]DOMAIN-SUFFIX,lowiro.com
+# Bemanicn
+ruleset=DIRECT,[]DOMAIN-SUFFIX,bemanicn.cc
+
+# Guard
+ruleset=REJECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+ruleset=REJECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list
+
+# Zhihu
+ruleset=REJECT,[]IP-CIDR,118.89.204.198/32
+
+# GoogleSearch
+ruleset=📢Google,https://raw.githubusercontent.com/EliceAM/Profiles/main/Clash/RuleSet/Google.list
+
+# Emby
+ruleset=🎬Emby,[]DOMAIN-SUFFIX,emby.wtf
+
+# Telegram SG
+ruleset=🇸🇬SG,[]IP-CIDR,91.108.16.0/27,no-resolve
+ruleset=🇸🇬SG,[]IP-CIDR,91.108.56.0/24,no-resolve
+ruleset=🇸🇬SG,[]IP-CIDR,149.154.168.0/22,no-resolve
+ruleset=🇸🇬SG,[]IP-CIDR,2001:b28:f23f:f005::a/128,no-resolve
+# Telegram US
+ruleset=🇺🇸US,[]IP-CIDR,91.108.12.0/27,no-resolve
+ruleset=🇺🇸US,[]IP-CIDR,149.154.172.0/22,no-resolve
+ruleset=🇺🇸US,[]IP-CIDR,2001:b28:f23d:f001::e/128,no-resolve
+ruleset=🇺🇸US,[]IP-CIDR,2001:b28:f23d:f003::e/128,no-resolve
+ruleset=🇺🇸US,[]IP-CIDR,2001:b28:f23d:f001::a/128,no-resolve
+ruleset=🇺🇸US,[]IP-CIDR,2001:b28:f23d:f003::a/128,no-resolve
+# Telegram NL
+ruleset=🇳🇱NL,[]IP-CIDR,91.108.4.0/24,no-resolve
+ruleset=🇳🇱NL,[]IP-CIDR,91.108.8.0/27,no-resolve
+ruleset=🇳🇱NL,[]IP-CIDR,149.154.160.0/22,no-resolve
+ruleset=🇳🇱NL,[]IP-CIDR,149.154.164.0/22,no-resolve
+ruleset=🇳🇱NL,[]IP-CIDR,2001:67c:4e8:f002::e/128,no-resolve
+ruleset=🇳🇱NL,[]IP-CIDR,2001:67c:4e8:f002::a/128,no-resolve
+ruleset=🇳🇱NL,[]IP-CIDR,2001:67c:4e8:f004::a/128,no-resolve
+
+# PayPal
+ruleset=💰PayPal,https://raw.githubusercontent.com/EliceAM/Profiles/main/Clash/RuleSet/PayPal.list
+
+# Game
+ruleset=🎮Game,https://raw.githubusercontent.com/EliceAM/Profiles/main/Clash/RuleSet/Game.list
+
+# Streaming
+ruleset=📹YouTube,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
+ruleset=🎥Netflix,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list
+ruleset=🌍Global,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+ruleset=📺StreamingSE,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
+
+# JP Region
+ruleset=🇯🇵JP,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Dmm.list
+
+# Appstore
+ruleset=🍎AppStore,https://raw.githubusercontent.com/EliceAM/Profiles/main/Clash/RuleSet/AppStore.list
+
+# Global
+ruleset=🌍Global,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
+
+# China DOMAIN
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
+
+# China IP
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+ruleset=DIRECT,[]GEOIP,CN
+ruleset=🚩Final,[]FINAL
+
+######## custom_proxy ########
+
+custom_proxy_group=🌍Global`select`[]🇭🇰HK`[]🇨🇳TW`[]🇸🇬SG`[]🇯🇵JP`[]🇺🇸US`[]DIRECT
+custom_proxy_group=📢Google`select`[]🇸🇬SG`[]🇭🇰HK`[]🇯🇵JP`[]🇺🇸US
+custom_proxy_group=📱Telegram`select`[]🇸🇬SG`[]🇺🇸US`[]🇭🇰HK
+custom_proxy_group=🎮Game`select`[]🇭🇰HK`[]🇯🇵JP`[]DIRECT
+custom_proxy_group=📹YouTube`select`[]🇺🇸US`[]🇭🇰HK`[]🇸🇬SG
+custom_proxy_group=🎥Netflix`select`[]🇨🇳TW`[]🇭🇰HK`[]🇸🇬SG
+custom_proxy_group=🎬Emby`select`[]DIRECT`[]🇭🇰HK
+custom_proxy_group=📺StreamingSE`select`[]DIRECT`[]🇭🇰HK`[]🇨🇳TW
+custom_proxy_group=💰PayPal`select`[]🇺🇸US`[]DIRECT
+custom_proxy_group=🍎AppStore`select`[]🇺🇸US`[]DIRECT
+custom_proxy_group=🚩Final`select`[]🇺🇸US`[]🌍Global`[]DIRECT
+custom_proxy_group=🇭🇰HK`url-test`(港|HK|Hong Kong)`http://www.gstatic.com/generate_204`600,,50
+custom_proxy_group=🇯🇵JP`url-test`(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan)`http://www.gstatic.com/generate_204`600,,50
+custom_proxy_group=🇺🇸US`url-test`(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)`http://www.gstatic.com/generate_204`600,,50
+custom_proxy_group=🇨🇳TW`url-test`(台|新北|彰化|TW|Taiwan)`http://www.gstatic.com/generate_204`600,,50
+custom_proxy_group=🇸🇬SG`url-test`(新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`600,,50
+custom_proxy_group=🇳🇱NL`url-test`(荷兰|阿姆斯特丹|NL|Netherlands)`http://www.gstatic.com/generate_204`600,,100
+
+enable_rule_generator=true
+overwrite_original_rules=true
+clash_rule_base=https://raw.githubusercontent.com/EliceAM/Profiles/main/Clash/Basic.yaml
+
+
