@@ -1,5 +1,5 @@
 # 修改自： https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/Outbound.yaml
-##注意修改 default-nameserver 为自己本地运营商dns
+# 只兼容OpenClash远端服务配置，使用前注意修改 default-nameserver 为自己本地的运营商DNS
 
 # Port of HTTP(S) proxy server on the local end
 port: 7890
