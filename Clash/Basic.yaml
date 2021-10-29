@@ -1,91 +1,24 @@
-# 修改自： https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/Outbound.yaml
-# 只兼容OpenClash远端服务配置，使用前注意修改 default-nameserver 为自己本地的运营商DNS
-
-# Port of HTTP(S) proxy server on the local end
-# port: 7890
-
-# Port of SOCKS5 proxy server on the local end
-# socks-port: 7891
-
-# Transparent proxy server port for Linux and macOS (Redirect TCP and TProxy UDP)
-# redir-port: 7892
-
-# Transparent proxy server port for Linux (TProxy TCP and TProxy UDP)
-# tproxy-port: 7893
-
-# HTTP(S) and SOCKS4(A)/SOCKS5 server on the same port
-mixed-port: 7890
-
-# authentication of local SOCKS5/HTTP(S) server
-# authentication:
-#  - "user1:pass1"
-#  - "user2:pass2"
-
-# Set to true to allow connections to the local-end server from
-# other LAN IP addresses
-allow-lan: false
-
-# This is only applicable when `allow-lan` is `true`
-# '*': bind all IP addresses
-# 192.168.122.11: bind a single IPv4 address
-# "[aaaa::a8aa:ff:fe09:57d8]": bind a single IPv6 address
-bind-address: '*'
-
-# Clash router working mode
-# rule: rule-based packet routing
-# global: all packets will be forwarded to a single endpoint
-# direct: directly forward the packets to the Internet
-mode: rule
-
-# Clash by default prints logs to STDOUT
-# info / warning / error / debug / silent
-log-level: info
-
-# When set to false, resolver won't translate hostnames to IPv6 addresses
-ipv6: false
-
-# RESTful web API listening address
-external-controller: 127.0.0.1:9090
+# 只用于OpenClash远端服务配置，使用前注意修改 default-nameserver 为自己本地的运营商DNS
 
 hosts:
-  # '*.clash.dev': 127.0.0.1
-  # '.dev': 127.0.0.1
-  # 'alpha.clash.dev': '::1'
-
   # Firebase Cloud Messaging
   'mtalk.google.com': 108.177.125.188
   # Google Dl
   'dl.google.com': 180.163.151.161
   'dl.l.google.com': 180.163.151.161
+  # GitHub
+  'raw.githubusercontent.com': 185.199.110.133
 
-profile:
-  # Store the `select` results in $HOME/.config/clash/.cache
-  # set false If you don't want this behavior
-  # when two different configurations have groups with the same name, the selected values are shared
-  store-selected: false
-
-# DNS server settings
-# This section is optional. When not present, the DNS server will be disabled.
-
-# DNS server settings
-# This section is optional. When not present, the DNS server will be disabled.
 dns:
-  enable: false
+  enable: true
   listen: 0.0.0.0:53
-  # ipv6: false # when the false, response to AAAA questions will be empty
-
-  # These nameservers are used to resolve the DNS nameserver hostnames below.
-  # Specify IP addresses only
+  ipv6: false
   default-nameserver:
     - 221.176.88.95
     - 211.138.164.6
-  enhanced-mode: redir-host # or fake-ip
-  fake-ip-range: 198.18.0.1/16 # Fake IP addresses pool CIDR
-  # use-hosts: true # lookup hosts and return IP record
-  
-  # Hostnames in this list will not be resolved with fake IPs
-  # i.e. questions to these domain names will always be answered with their
-  # real IP addresses
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  #这里的域名永远使用真实ip
   fake-ip-filter:
     - '*.lan'
     - localhost.ptlogin2.qq.com
@@ -100,15 +33,8 @@ dns:
     - '*.battlenet.com'
     - '*.blzstatic.cn'
     - '*.battle.net'
-  
-  # Supports UDP, TCP, DoT, DoH. You can specify the port to connect to.
-  # All DNS questions are sent directly to the nameserver, without proxies
-  # involved. Clash answers the DNS question with the first result gathered.
   nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
-
-proxies:
-# 支持的协议及加密算法示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/wiki/configuration
 
 proxy-providers:
