@@ -1,5 +1,16 @@
 # 只用于OpenClash远端服务配置，使用前注意修改 default-nameserver 为自己本地的运营商DNS
 
+port: 7890
+socks-port: 7891
+
+# Set to true to allow connections to the local-end server from
+# other LAN IP addresses
+allow-lan: false
+bind-address: '*'
+mode: rule
+log-level: silent
+ipv6: false
+
 hosts:
   # Firebase Cloud Messaging
   'mtalk.google.com': 108.177.125.188
@@ -18,7 +29,7 @@ dns:
     - 211.138.164.6
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
-  #这里的域名永远使用真实ip
+  use-hosts: true
   fake-ip-filter:
     - '*.lan'
     - localhost.ptlogin2.qq.com
