@@ -30,7 +30,8 @@ dns:
   use-hosts: true
   fake-ip-filter:
     - '*.lan'
-    - localhost.ptlogin2.qq.com
+    - '*.qq.com'
+    - 'qq.com'
     - '+.srv.nintendo.net'
     - '+.stun.playstation.net'
     - '+.msftconnecttest.com'
