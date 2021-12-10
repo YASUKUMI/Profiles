@@ -4,6 +4,7 @@ port: 7890
 socks-port: 7891
 mixed-port: 7890
 allow-lan: true
+bind-address: '*'
 mode: rule
 log-level: info
 ipv6: false
@@ -16,18 +17,19 @@ hosts:
   # Google Dl
   'dl.google.com': 180.163.151.161
   'dl.l.google.com': 180.163.151.161
+profile:
+  store-selected: false
 dns:
   enable: true
-  ipv6: false
   listen: 0.0.0.0:53
   enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
   default-nameserver:
     - 221.176.88.95
     - 211.138.164.6
   nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
+  fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
     - '*.lan'
     - '*.qq.com'
@@ -43,4 +45,3 @@ dns:
     - '*.battlenet.com'
     - '*.blzstatic.cn'
     - '*.battle.net'
-  
