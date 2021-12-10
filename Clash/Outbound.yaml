@@ -1,7 +1,7 @@
 # 只用于OpenClash远端服务配置，使用前注意修改 default-nameserver 为自己本地的运营商DNS
 port: 7890
 socks-port: 7891
-mixed-port: 7890
+mixed-port: 7893
 allow-lan: true
 bind-address: '*'
 mode: rule
