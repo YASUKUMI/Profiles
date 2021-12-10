@@ -2,32 +2,30 @@
 
 port: 7890
 socks-port: 7891
-
-# Set to true to allow connections to the local-end server from
-# other LAN IP addresses
-allow-lan: false
-bind-address: '*'
+allow-lan: true
 mode: rule
-log-level: silent
-ipv6: false
-
+log-level: info
+experimental:
+  ignore-resolve-fail: true
 hosts:
   # Firebase Cloud Messaging
   'mtalk.google.com': 108.177.125.188
   # Google Dl
   'dl.google.com': 180.163.151.161
   'dl.l.google.com': 180.163.151.161
-
 dns:
   enable: true
-  listen: 0.0.0.0:53
   ipv6: false
+  use-hosts: true
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
   default-nameserver:
     - 221.176.88.95
     - 211.138.164.6
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  use-hosts: true
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
   fake-ip-filter:
     - '*.lan'
     - '*.qq.com'
@@ -43,6 +41,4 @@ dns:
     - '*.battlenet.com'
     - '*.blzstatic.cn'
     - '*.battle.net'
-  nameserver:
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
+  
