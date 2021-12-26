@@ -14,8 +14,8 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   default-nameserver:
-    - 221.176.88.95
-    - 211.138.164.6
+    - 202.106.46.151
+    - 202.106.195.68
   nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
