@@ -11,7 +11,7 @@ experimental:
 dns:
   enable: true
   listen: 0.0.0.0:53
-  enhanced-mode: redir-host
+  enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   default-nameserver:
     - 202.106.46.151
