@@ -97,6 +97,10 @@ dns:
     - "*.bnetproduct-a.akamaihd.net"
     - "*.bnetshopus.akamaized.net"
     - "*.starcraft2.com"
+    - '*.battlenet.com.cn'
+    - '*.battlenet.com'
+    - '*.blzstatic.cn'
+    - '*.battle.net'
     - "+.wotgame.cn"
     - "+.wggames.cn"
     - "+.wowsgame.cn"
