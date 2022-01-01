@@ -20,14 +20,13 @@ dns:
   enable: true
   listen: 0.0.0.0:53
   enhanced-mode: redir-host
-  fake-ip-range: 198.18.0.1/16
+  redir-host-range: 198.18.0.1/16
   default-nameserver:
     - 202.106.46.151
     - 202.106.195.68
   nameserver:
-    - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
-  fake-ip-filter:
+  redir-host-filter:
     - '*.lan'
     - localhost.ptlogin2.qq.com
     - '+.srv.nintendo.net'
