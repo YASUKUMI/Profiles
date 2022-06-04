@@ -25,6 +25,7 @@ DOMAIN-KEYWORD,gelbooru
 DOMAIN-SUFFIX,vol.moe
 DOMAIN-SUFFIX,mox.moe
 DOMAIN-SUFFIX,img.mxomo.com
+DOMAIN-SUFFIX,mxomo.com
 DOMAIN-SUFFIX,nhentai.net
 
 # EHgallery
@@ -79,3 +80,53 @@ DOMAIN-SUFFIX,xsijishe.com
 DOMAIN-SUFFIX,rewrfsrewr.xyz
 
 DOMAIN-SUFFIX,katfile.com
+
+# gitee
+DOMAIN-SUFFIX,gitee.com
+
+# moddb
+DOMAIN-SUFFIX,moddb.com
+
+# manhuagui
+DOMAIN-KEYWORD,mhgui
+DOMAIN-KEYWORD,manhuagui
+DOMAIN-KEYWORD,hamreus
+
+# 177pic
+DOMAIN-SUFFIX,177picyy.com
+
+# 85
+DOMAIN-KEYWORD,85tube
+
+# 91
+DOMAIN-KEYWORD,91api
+
+# sankakucomplex
+DOMAIN-KEYWORD,sankakucomplex
+
+# pica
+DOMAIN-KEYWORD,picacomic
+
+# cocomanga
+DOMAIN-SUFFIX,cocomanga.com
+DOMAIN-SUFFIX,cococomic.com
+DOMAIN-SUFFIX,cocomanhua.com
+
+# BlueAchieveGB
+DOMAIN-SUFFIX,toy.log.nexon.io
+DOMAIN-SUFFIX,sdk-push.mp.nexon.com
+DOMAIN-SUFFIX,api-pub.nexon.com
+DOMAIN-SUFFIX,m-api.nexon.com
+DOMAIN-SUFFIX,jp.livelog.nexon.com
+DOMAIN-SUFFIX,nxm-tw-bagl.nexon.com
+
+# R18MANGA
+]DOMAIN-KEYWORD,jmcomic
+]DOMAIN-KEYWORD,18comic
+]DOMAIN-KEYWORD,jmapi
+
+# MOBINOVEL
+DOMAIN-KEYWORD,mobinovels
+
+# acgndog
+DOMAIN-SUFFIX,acgndog.com
