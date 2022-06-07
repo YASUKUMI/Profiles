@@ -123,9 +123,9 @@ DOMAIN-SUFFIX,jp.livelog.nexon.com
 DOMAIN-SUFFIX,nxm-tw-bagl.nexon.com
 
 # R18MANGA
-]DOMAIN-KEYWORD,jmcomic
-]DOMAIN-KEYWORD,18comic
-]DOMAIN-KEYWORD,jmapi
+DOMAIN-KEYWORD,jmcomic
+DOMAIN-KEYWORD,18comic
+DOMAIN-KEYWORD,jmapi
 
 # MOBINOVEL
 DOMAIN-KEYWORD,mobinovels
