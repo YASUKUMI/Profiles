@@ -135,3 +135,7 @@ DOMAIN-SUFFIX,acgndog.com
 
 # DeepL
 DOMAIN-KEYWORD,deepl
+
+#reddit
+DOMAIN-KEYWORD,reddit
+
