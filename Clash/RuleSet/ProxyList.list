@@ -144,3 +144,6 @@ DOMAIN-KEYWORD,huggingface
 
 #stackoverflow
 DOMAIN-KEYWORD,stackoverflow
+
+#bandcamp
+DOMAIN-KEYWORD,bandcamp
