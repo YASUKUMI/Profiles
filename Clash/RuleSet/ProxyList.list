@@ -27,6 +27,9 @@ DOMAIN-KEYWORD,gelbooru
 # Manga
 DOMAIN-SUFFIX,vol.moe
 DOMAIN-SUFFIX,mox.moe
+
+#mercari
+DOMAIN-KEYWORD,mercari
 DOMAIN-SUFFIX,img.mxomo.com
 DOMAIN-SUFFIX,mxomo.com
 DOMAIN-SUFFIX,nhentai.net
