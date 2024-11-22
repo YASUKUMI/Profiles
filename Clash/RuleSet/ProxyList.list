@@ -158,6 +158,7 @@ DOMAIN-SUFFIX,classic.blizzard.com
 DOMAIN-SUFFIX,blizzard.net
 DOMAIN-SUFFIX,classic.blizzard.net
 DOMAIN-SUFFIX,battle.net
+DOMAIN-KEYWORD,battle
 
 #hobbyheaven
 DOMAIN-KEYWORD,hobbyheaven
