@@ -169,5 +169,8 @@ DOMAIN-KEYWORD,chatgpt
 #X
 DOMAIN-SUFFIX,x.com
 
+#gigafile
+DOMAIN-KEYWORD,gigafile
+
 #GORM
 DOMAIN-KEYWORD,gorm
