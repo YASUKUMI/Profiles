@@ -181,6 +181,6 @@ DOMAIN-KEYWORD,cuffs
 
 #BackpackArena
 DOMAIN-KEYWORD,amazon
-DOMAIN-SUFFIX,citrus.sh
-DOMAIN-SUFFIX,adjust.com
-DOMAIN-SUFFIX,toastoven.net
+DOMAIN-KEYWORD,citrus
+DOMAIN-KEYWORD,adjust
+DOMAIN-KEYWORD,toastoven
