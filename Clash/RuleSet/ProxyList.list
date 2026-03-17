@@ -182,9 +182,10 @@ DOMAIN-KEYWORD,cuffs
 #BackpackArena
 DOMAIN-KEYWORD,amazon
 DOMAIN-KEYWORD,citrus
-DOMAIN-SUFFIX,adjust.com
+DOMAIN-KEYWORD,adjust
 DOMAIN-KEYWORD,toastoven
-DOMAIN-SUFFIX,applovin.com
+DOMAIN-KEYWORD,applovin
 DOMAIN-KEYWORD,yandex
+DOMAIN-KEYWORD,backpackarena
 
 #
