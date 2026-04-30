@@ -4,6 +4,10 @@ DOMAIN-KEYWORD,cdn-lfs.huggingface
 #hikarifield
 DOMAIN-KEYWORD,hikarifield
 
-#sc2
-DOMAIN-KEYWORD,battlenet
-DOMAIN-KEYWORD,blizzard
+#sc2kr
+DOMAIN-SUFFIX,blizzard.com
+DOMAIN-SUFFIX,classic.blizzard.com
+DOMAIN-SUFFIX,blizzard.net
+DOMAIN-SUFFIX,classic.blizzard.net
+DOMAIN-SUFFIX,battle.net
+DOMAIN-KEYWORD,battle
